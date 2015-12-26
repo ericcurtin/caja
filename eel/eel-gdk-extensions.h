@@ -124,11 +124,13 @@ EelGdkGeometryFlags eel_gdk_parse_geometry                 (const char          
         guint               *height_return);
 #if GTK_CHECK_VERSION(3,0,0)
 void                eel_cairo_draw_layout_with_drop_shadow (cairo_t             *cr,
+                                                            GdkRGBA             *text_color,
+                                                            GdkRGBA             *shadow_color,
 #else
 void                eel_gdk_draw_layout_with_drop_shadow   (GdkDrawable         *drawable,
-#endif
         						    GdkColor            *text_color,
         						    GdkColor            *shadow_color,
+#endif
         						    int                  x,
         						    int                  y,
         						    PangoLayout         *layout);
